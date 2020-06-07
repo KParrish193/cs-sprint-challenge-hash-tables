@@ -14,7 +14,7 @@ def reconstruct_trip(tickets, length):
     route = []
     flight = {}
 
-    # loop through tickets, set source as key, set destination as value
+    # loop through tickets to make table, set source as key, set destination as value
     for i in range(length):
         key = tickets[i].source
         value = tickets[i].destination
@@ -54,3 +54,10 @@ tickets = [
 ]
 
 print(reconstruct_trip(tickets, 10))
+
+# plan
+
+# set source and destination as key value pair
+# route is set by matching previous destination to source
+# start trip at source none
+# append matching prev destination to curr source until destination is none
